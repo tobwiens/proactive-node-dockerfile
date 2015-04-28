@@ -15,5 +15,9 @@ ADD addons/jsr223-docker-compose-0.1.jar /data/scheduling/addons/
 # Add docker compose addon configuration file
 ADD config/docker-compose.properties /data/scheduling/addons/config/
 
+# Add debug startup script; allow remote debugging on port 5005(Node) and 5006(Server)
+ADD debug/scripts/proactive-node /data/scheduling/bin/
+ADD debug/scripts/proactive-server /data/scheduling/bin/
+
 # Run proactive scheduler with zero nodes
 ENTRYPOINT ["/data/scheduling/bin/proactive-node", "-Dproactive.useIPaddress=true"]
