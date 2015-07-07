@@ -2,6 +2,9 @@
 FROM tobwiens/proactive-scheduler:latest
 MAINTAINER Tobias Wiens <tobwiens@gmail.com>
 
+# Install tools
+RUN ["/bin/bash", "-c", "apt-get install curl -y"]
+
 # Install the docker deamon inside the node; for the docker support.
 RUN wget -qO- https://get.docker.com/ | sh
 
