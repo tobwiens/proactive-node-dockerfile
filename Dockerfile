@@ -28,6 +28,4 @@ VOLUME /var/lib/docker # It cannot be AUFS - so make it a volume
 # Run proactive scheduler with zero nodes and start the docker daemon with /usr/local/bin/wrapdocker
 ADD container-start-script.sh /
 RUN chmod +x /container-start-script.sh
-ENTRYPOINT ["/container-start-script.sh", "-Dproactive.useIPaddress=true", "-Dproactive.net.interface=eth0"]
-
-#ENTRYPOINT ["/data/scheduling/bin/proactive-node", "-Dproactive.useIPaddress=true"]
+ENTRYPOINT ["/container-start-script.sh", "-Dproactive.useIPaddress=true"]
