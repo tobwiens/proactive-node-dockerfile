@@ -1,5 +1,5 @@
 # Use proactive scheduler and change the entrypoint
-FROM tobwiens/proactive-scheduler:latest
+FROM tobwiens/proactive-scheduler:6.1.0
 MAINTAINER Tobias Wiens <https://github.com/tobwiens/proactive-node-dockerfile/>
 
 # Install tools
