@@ -1,5 +1,5 @@
 # Use proactive scheduler image and change the entrypoint
-FROM tobwiens/proactive-scheduler:7.3.0
+FROM tobwiens/proactive-scheduler:7.3.1
 MAINTAINER Tobias Wiens <https://github.com/tobwiens/proactive-node-dockerfile/>
 
 ENV DOCKER_COMPOSE_VERSION 1.5.1
