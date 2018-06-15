@@ -1,5 +1,5 @@
 # Use proactive scheduler image and change the entrypoint
-FROM tobwiens/proactive-scheduler:master
+FROM tobwiens/proactive-bare-scheduler:master
 MAINTAINER Tobias Wiens <https://github.com/tobwiens/proactive-node-dockerfile/>
 
 ENV DOCKER_COMPOSE_VERSION 1.5.1
@@ -17,7 +17,7 @@ RUN ["/bin/bash", "-c", "chmod +x /usr/local/bin/docker-compose"]
 ### VOLUMES
 VOLUME /var/lib/docker # It cannot be AUFS - so make it a volume
 
-# Run proactive scheduler with zero nodes and start the docker daemon with /usr/local/bin/wrapdocker
+# Run proactive node and start docker daemon
 ADD container-start-script.sh /
 RUN ["/bin/bash", "-c", "chmod +x /container-start-script.sh"]
 ENTRYPOINT ["/container-start-script.sh", "-Dproactive.useIPaddress=true"]
