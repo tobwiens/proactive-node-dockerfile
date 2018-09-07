@@ -15,7 +15,8 @@ RUN ["/bin/bash", "-c", "curl -L https://github.com/docker/compose/releases/down
 RUN ["/bin/bash", "-c", "chmod +x /usr/local/bin/docker-compose"]
 
 ### VOLUMES
-VOLUME /var/lib/docker # It cannot be AUFS - so make it a volume
+# It cannot be AUFS - so make it a volume
+VOLUME /var/lib/docker 
 
 # Run proactive node and start docker daemon
 ADD container-start-script.sh /
