@@ -1,3 +1,4 @@
+ARG SCHEDULER_BASE_IMAGE
 
 # Use proactive scheduler image and change the entrypoint
 FROM $SCHEDULER_BASE_IMAGE
