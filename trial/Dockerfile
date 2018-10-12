@@ -1,4 +1,3 @@
-ENV SCHEDULER_BASE_IMAGE base-image-not-defined
 
 # Use proactive scheduler image and change the entrypoint
 FROM $SCHEDULER_BASE_IMAGE
