@@ -3,7 +3,7 @@ ARG SCHEDULER_BASE_IMAGE
 # Use proactive scheduler image and change the entrypoint
 FROM $SCHEDULER_BASE_IMAGE
 
-RUN ["/bin/bash", "-c", "apt-get update && apt-get install -y python curl"]
+RUN ["/bin/bash", "-c", "apt-get update && apt-get install -y python curl vim iputils-ping"]
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py
 RUN python /usr/local/bin/pip install py4j
